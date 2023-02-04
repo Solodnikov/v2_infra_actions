@@ -77,8 +77,8 @@ jobs:
         script: |
           # Выполняет pull образа с DockerHub
           # sudo docker pull <имя-пользователя>/<имя-репозитория>
-          sudo docker pull solodnikov/v2_infra_action
+          sudo docker pull solod/solodnikov
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
           # sudo docker run --rm -d -p 5000:5000 <имя-пользователя>/<имя-репозитория>
-          sudo docker run --rm -d -p 5000:5000 solodnikov/v2_infra_action
+          sudo docker run --rm -d -p 5000:5000 solod/solodnikov
