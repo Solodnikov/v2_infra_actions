@@ -76,7 +76,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull solod/solodnikov
+          sudo docker pull solodnikov/v2_infra_action
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 solod/solodnikov
+          sudo docker run --rm -d -p 5000:5000 solodnikov/v2_infra_action
